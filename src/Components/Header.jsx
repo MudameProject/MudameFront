@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import logo from "../assets/logo.png"
 import { AiOutlineClose } from "react-icons/ai";
 import carro from "../assets/carro.mp4"
+
 
 
 function Header() {
@@ -55,7 +57,8 @@ function Header() {
                         </ul>
                     </div>
                     <div class="flex items-center gap-5">
-             <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-sky-500 transition-colors"><a href="/src/RegisterCollaborator.html" class="text-decoration-none" >Registrarse</a></button>
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-sky-500 transition-colors">
+  <Link to="/Register" class="text-decoration-none">Registrarse</Link></button>
             <button id="open-modal"><ion-icon name="log-out-outline" class="text-3xl cursor-pointer" id="Login"></ion-icon></button>  
         </div>
                 </nav>    
