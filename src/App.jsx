@@ -1,17 +1,19 @@
-function App() {
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./components/Home/Home";
+import Register from "./components/Register/Register";
+import Login from "./components/Login/Login";
 
+function App() {
   return (
-  <>
-    <div className="min-h-screen bg-slate-900 flex justify-center items-center">
-      <div className="text-center">
-        <h1 className="text-3xl font-bold text-white mb-8">Hola weys</h1>
-        <button className="w-32 h-12 bg-blue-500 text-white font-bold rounded-full shadow-md hover:bg-blue-600">
-          wenas
-        </button>
-      </div>
-    </div>
-  </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Register" element={<Register />} />
+        <Route path="/Login" element={<Login />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
