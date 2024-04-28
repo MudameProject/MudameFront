@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const InputField = ({ label, type, id, placeholder, value, onChange }) => (
   <div className="mb-4">
@@ -7,7 +7,7 @@ const InputField = ({ label, type, id, placeholder, value, onChange }) => (
       {label}
     </label>
     <input
-      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all ease-in duration-200"
       id={id}
       type={type}
       placeholder={placeholder}
@@ -49,24 +49,30 @@ const Register = () => {
     <div className="flex items-center justify-center h-screen bg-gray-900">
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        className="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 w-1/2"
       >
-        <InputField
-          label="Nombre"
-          type="text"
-          id="name"
-          placeholder="Nombre"
-          value={formData.name}
-          onChange={handleChange}
-        />
-        <InputField
-          label="Apellido"
-          type="text"
-          id="lastName"
-          placeholder="Apellido"
-          value={formData.lastName}
-          onChange={handleChange}
-        />
+        <div className="flex mb-4">
+          <div className="w-1/2 pr-2">
+            <InputField
+              label="Nombre"
+              type="text"
+              id="name"
+              placeholder="Nombre"
+              value={formData.name}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="w-1/2 pl-2">
+            <InputField
+              label="Apellido"
+              type="text"
+              id="lastName"
+              placeholder="Apellido"
+              value={formData.lastName}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
         <InputField
           label="Número de Teléfono"
           type="tel"
@@ -101,7 +107,7 @@ const Register = () => {
         />
         <div className="flex items-center justify-between">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition-all ease-in duration-200"
             type="submit"
           >
             Registrarse
