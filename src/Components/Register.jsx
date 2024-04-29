@@ -1,6 +1,5 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import Truck from "./Truck";
 import Road from "./Road";
 
 const InputField = ({ label, type, id, placeholder, value, onChange }) => (
@@ -12,6 +11,7 @@ const InputField = ({ label, type, id, placeholder, value, onChange }) => (
       className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all ease-in duration-200"
       id={id}
       type={type}
+      name={id}
       placeholder={placeholder}
       value={value}
       onChange={onChange}
@@ -35,16 +35,38 @@ const Register = () => {
     lastname: "",
     phoneNumber: "",
     password: "",
+    confirmPassword: "",
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // aqui me falta poner toda la logica :'v
-    console.log(formData);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch("http://localhost:3000/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Error al registrar el usuario");
+      }
+
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+      if (error.name === "TypeError") {
+        console.error(
+          "al parecer, el servidor no esta encendido, por favor enciendelo ;)"
+        );
+      }
+    }
   };
 
   return (
@@ -59,6 +81,7 @@ const Register = () => {
               label="Nombre"
               type="text"
               id="name"
+              name="name"
               placeholder="Nombre"
               value={formData.name}
               onChange={handleChange}
@@ -68,18 +91,20 @@ const Register = () => {
             <InputField
               label="Apellido"
               type="text"
-              id="lastName"
+              id="lastname"
+              name="lastname"
               placeholder="Apellido"
-              value={formData.lastName}
+              value={formData.lastname}
               onChange={handleChange}
             />
           </div>
-          <Road/>
+          <Road />
         </div>
         <InputField
           label="Número de Teléfono"
           type="tel"
           id="phoneNumber"
+          name="phoneNumber"
           placeholder="123-456-7890"
           value={formData.phoneNumber}
           onChange={handleChange}
@@ -88,6 +113,7 @@ const Register = () => {
           label="Correo Electrónico"
           type="email"
           id="email"
+          name="email"
           placeholder="Correo Electrónico"
           value={formData.email}
           onChange={handleChange}
@@ -96,6 +122,7 @@ const Register = () => {
           label="Contraseña"
           type="password"
           id="password"
+          name="password"
           placeholder="******************"
           value={formData.password}
           onChange={handleChange}
@@ -104,6 +131,7 @@ const Register = () => {
           label="Confirmar Contraseña"
           type="password"
           id="confirmPassword"
+          name="confirmPassword"
           placeholder="******************"
           value={formData.confirmPassword}
           onChange={handleChange}
