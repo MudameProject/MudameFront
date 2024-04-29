@@ -11,12 +11,7 @@ export default {
         blancoFondo: "#F5F5F5",
         azulvivo: "#191970",
         azulCorpotativo: "#5485d2",
-      },
-      backgroundImage: {
-        casa: "url('/Img/casa.jpg')",
-        camion: "url('/Img/camion container.png')",
-        fondoExagonal: "url('/Img/pngwing.com.png')",
-        camion: "url('/Img/contenedor.png')",
+        azulCielo: "#5885b7",
       },
 
       Animation: {

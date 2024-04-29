@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import Truck from "./truck";
+import Truck from "./Truck";
+import Road from "./Road";
 
 const InputField = ({ label, type, id, placeholder, value, onChange }) => (
   <div className="mb-4">
@@ -47,7 +48,7 @@ const Register = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-900">
+    <div className="pt-10 flex items-start justify-center h-screen bg-gradient-to-b from-azulCielo from-60% to-[#0F5D38] -z-50">
       <form
         onSubmit={handleSubmit}
         className="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 w-1/2"
@@ -73,7 +74,7 @@ const Register = () => {
               onChange={handleChange}
             />
           </div>
-          <Truck/>
+          <Road/>
         </div>
         <InputField
           label="Número de Teléfono"
