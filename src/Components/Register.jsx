@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import Truck from "./truck";
 
 const InputField = ({ label, type, id, placeholder, value, onChange }) => (
   <div className="mb-4">
@@ -72,6 +73,7 @@ const Register = () => {
               onChange={handleChange}
             />
           </div>
+          <Truck/>
         </div>
         <InputField
           label="Número de Teléfono"
