@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css'
 import Header from './Components/Header'
 import Register from "./Components/Register";
+import Nosotros from "./Components/Section"
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Route path="/Register" element={<Register />} />
     </Routes>
   </Router>
+  
   )
 }
 

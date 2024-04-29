@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import logo from "../assets/logo.png"
 import { AiOutlineClose } from "react-icons/ai";
 import carro from "../assets/carro.mp4"
+import Nosotros from "./Section"
+import Mudanzas from "../assets/Mud.jpg"
+import Mudanza1 from "../assets/mudanza.jpg";
 
 
 
@@ -79,33 +82,21 @@ function Header() {
     </div>
     <div class="w-full hidden h-full md:flex items-center flex-wrap justify-center bg-AzulCyan/20">
         <div class="w-1/2 h-1/2 border-r-[15px] border-white/5  rounded-b-full">
-            <video class="w-full rounded-b-full h-full object-cover" loop autoPlay muted>
-                <source src={carro} type="video/mp4"></source>
-                Tu navegador no soporta la reproducción de videos.
-              </video>
+        <img className="w-full rounded-b-full h-full object-cover" src={Mudanza1} alt="" />
         </div>
         <div class="w-1/3 h-1/3  rounded-full">
-            <video class="w-full rounded-full h-full object-cover" loop autoPlay muted>
-                <source src={carro} type="video/mp4"></source>
-                Tu navegador no soporta la reproducción de videos.
-              </video>
+        <img className="w-full rounded-full h-full object-cover" src={Mudanza1} alt="" />
         </div>
         <div class="w-1/3 h-1/3 border-r-[15px] animate-wiggle1 border-white/5  rounded-full">
-            <video class="w-full rounded-full h-full object-cover" loop autoPlay muted>
-                <source src={carro} type="video/mp4"></source>
-                Tu navegador no soporta la reproducción de videos.
-              </video>
+        <img className="w-full rounded-full h-full object-cover" src={Mudanza1} alt="" />
         </div>
+        
         <div class="w-1/2 h-1/2  rounded-t-full">
-            <video class="w-full rounded-t-full h-full object-cover" loop autoPlay muted>
-                <source src={carro} type="video/mp4"></source>
-                Tu navegador no soporta la reproducción de videos.
-              </video>
+        <img className="w-full rounded-t-full h-full object-cover" src={Mudanza1} alt="" />
         </div>
     </div>
-    
-
    </div>
+   <Nosotros></Nosotros>
         </div>
     )
 }
