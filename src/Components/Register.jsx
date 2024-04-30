@@ -51,6 +51,7 @@ const Register = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
+        // body: JSON.parse(formData),
       });
 
       if (!response.ok) {
