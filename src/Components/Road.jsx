@@ -2,6 +2,8 @@ import React from "react";
 import Truck from "./Truck";
 import YellowLines from "./YellowLines";
 
+
+
 function Road() {
   const tamaño = screen.height;
 

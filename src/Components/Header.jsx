@@ -25,6 +25,7 @@ function Header() {
                                         <button className='hidden bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300' id='btnModal'>
                                             bitoncito
                                         </button>
+                                       
                                         <div className='hidden inset-0 items-center justify-center bg-black/50 z-50' id='contentModal'>
                                             <div className='bg-white rounded-lg p-6 w-2/3 md:w-1/2 lg:w-1/4 max-w-full shadow-lg transform transition-all duration-300'>
                                                 <div className='flex justify-between items-center border-b-2 border-gray-900 pb-4'>
