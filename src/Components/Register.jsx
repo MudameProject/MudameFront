@@ -37,7 +37,22 @@ const Register = () => {
     password: "",
     confirmPassword: "",
   });
-//asjdjasd
+
+
+  //funcion para mandar los datos pero al local storage
+
+  //   const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   try {
+  //     localStorage.setItem("formData", JSON.stringify(formData));
+  //     console.log("Data stored in local storage");
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
+
+  //funcion para mandar los datos a una base de datos
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
