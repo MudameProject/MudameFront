@@ -38,25 +38,23 @@ const Register = () => {
     confirmPassword: "",
   });
 
-
-  //funcion para mandar los datos pero al local storage
-
-  //   const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   try {
-  //     localStorage.setItem("formData", JSON.stringify(formData));
-  //     console.log("Data stored in local storage");
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
-
-  //funcion para mandar los datos a una base de datos
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  //funcion para mandar los datos pero al local storage
+
+//   const handleSubmit = (event) => {
+//   event.preventDefault();
+//   try {
+//     localStorage.setItem("formData", JSON.stringify(formData));
+//     console.log("Data stored in local storage");
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
+
+  //funcion para mandar los datos a una base de datos
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -88,7 +86,7 @@ const Register = () => {
     <div className="pt-10 flex items-start justify-center h-screen bg-gradient-to-b from-azulCielo from-60% to-[#0F5D38] -z-50">
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 w-1/2"
+        className="bg-blancoTransparente shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 w-1/2"
       >
         <div className="flex mb-4">
           <div className="w-1/2 pr-2">
@@ -113,7 +111,6 @@ const Register = () => {
               onChange={handleChange}
             />
           </div>
-          <Road />
         </div>
         <InputField
           label="Número de Teléfono"
@@ -159,6 +156,7 @@ const Register = () => {
             Registrarse
           </button>
         </div>
+        <Road />
       </form>
     </div>
   );

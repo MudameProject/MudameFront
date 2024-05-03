@@ -1,4 +1,4 @@
-:root{
+:root {
   overflow: hidden;
 }
 
@@ -6,16 +6,51 @@
   animation: rebote 0.6s infinite;
 }
 
-
-
 @keyframes rebote {
   0%,
   100% {
-    transform: translateY(-6%);
+    transform: translateY(-4%);
     animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
   50% {
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.infinite {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+  transform-origin: bottom;
+  transform-style: preserve-3d;
+  transform: rotatex(30deg);
+}
+.infinite::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(
+    90deg,
+    rgb(202 138 4) 0%,
+    rgb(202 138 4) 50%,
+    rgb(39 39 42) 50%,
+    rgb(39 39 42) 100%
+  );
+  background-size: 240px;
+  animation: animate 1s linear reverse infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 240px;
   }
 }

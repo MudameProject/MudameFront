@@ -12,6 +12,7 @@ export default {
         azulvivo: "#191970",
         azulCorpotativo: "#5485d2",
         azulCielo: "#5885b7",
+        blancoTransparente: "#ffffff88",
       },
 
       Animation: {
