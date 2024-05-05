@@ -6,6 +6,7 @@ import carro from "../assets/carro.mp4";
 import Nosotros from "./Section";
 import Objectiv from "./Objectiv";
 import Mudanza1 from "../assets/mudanza.jpg";
+import Services from "./Services";
 
 function Header() {
   return (
@@ -152,6 +153,7 @@ function Header() {
           </div>
         </div>
       <Objectiv/>
+      <Services/>
       </div>
       <Nosotros></Nosotros>
     </div>
