@@ -3,7 +3,7 @@ import Truck from "./Truck";
 
 function Road() {
   return (
-      <div className="w-screen h-48 absolute left-0 bottom-0">
+      <div className="w-screen h-48 absolute left-0 bottom-0 z-10">
         <Truck />
           
           <div className="infinite"></div>
