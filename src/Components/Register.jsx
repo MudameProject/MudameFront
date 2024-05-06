@@ -37,10 +37,12 @@ const Register = () => {
   //confirmacion de que no se pulsa ambas
 
   const mostrarUser = () => {
+    if (!driver)
     setUser(!user);
   };
 
   const mostrarDriver = () => {
+    if (!user)
     setDriver(!driver);
   };
 
