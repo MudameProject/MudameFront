@@ -152,8 +152,12 @@ function Header() {
             />
           </div>
         </div>
-      <Objectiv/>
-      <Services/>
+        <div className="flex justify-center w-screen">
+          <div className="flex flex-col flex-wrap">
+            <Objectiv />
+            <Services />
+          </div>
+        </div>
       </div>
       <Nosotros></Nosotros>
     </div>

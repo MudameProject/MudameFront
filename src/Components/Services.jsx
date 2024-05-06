@@ -28,11 +28,10 @@ function Services() {
               mudanza.
             </p>
             <p className="text-gray-600 text-lg mb-2">
-              <b>Servicio de revisión y calificación:</b> Después
-              de cada mudanza, los usuarios pueden dejar una revisión y
-              calificar su experiencia. Esto nos ayuda a mantener un alto nivel
-              de servicio y a los futuros usuarios a tomar decisiones
-              informadas.
+              <b>Servicio de revisión y calificación:</b> Después de cada
+              mudanza, los usuarios pueden dejar una revisión y calificar su
+              experiencia. Esto nos ayuda a mantener un alto nivel de servicio y
+              a los futuros usuarios a tomar decisiones informadas.
             </p>
           </div>
         </div>
