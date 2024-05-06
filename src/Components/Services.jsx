@@ -4,7 +4,7 @@ import ServicesImage from "../assets/services.jpeg";
 function Services() {
   return (
     <div className="bg-white rounded-lg p-8 transition-all duration-500 ease-in-out">
-      <div className="flex-col md:flex-row justify-between flex items-center">
+      <div className="flex-col-reverse md:flex-row  justify-between flex items-center">
         <div className="border-solid border-2 border-sky-500 w-full md:w-1/2 flex flex-col rounded-lg p-8 shadow-xl shadow-sky-300/40">
           <div className="mb-4">
             <p className="text-sky-600 text-2xl font-sans subpixel-antialiased font-bold">

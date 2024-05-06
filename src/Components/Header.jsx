@@ -2,15 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { AiOutlineClose } from "react-icons/ai";
-import carro from "../assets/carro.mp4";
-import Nosotros from "./Section";
 import Objectiv from "./Objectiv";
 import Mudanza1 from "../assets/mudanza.jpg";
 import Services from "./Services";
+import FAQ from "./FAQ";
 
 function Header() {
   return (
-    <div className="bg-white/70 min-h-screen font-roboto overflow-auto">
+    <div className="bg-white/70 min-h-screen font-roboto overflow-x-hidden">
       <div className="bg-white rounded-b-lg  w-full">
         <nav className="flex justify-between items-center w-11/12 mx-auto">
           <div class="">
@@ -152,14 +151,14 @@ function Header() {
             />
           </div>
         </div>
-        <div className="flex justify-center w-screen">
+        <div className="flex justify-center w-screen px-48 max-[1300px]:px-0">
           <div className="flex flex-col flex-wrap">
             <Objectiv />
             <Services />
+            <FAQ/>
           </div>
         </div>
       </div>
-      <Nosotros></Nosotros>
     </div>
   );
 }
