@@ -3,8 +3,8 @@ import React from 'react';
 function LoginUser() {
     return (
         <div className='flex w-full h-screen'>
-            <div className='w-full flex items-center justify-center lg:w-1/2'>
-                <div className='bg-white px-10 py-20 rounded-3xl border-2 border-gray-100'>
+            <div className='w-full flex items-center justify-center   lg:w-1/2  '>
+                <div className='border-blue-500 px-10 py-20 rounded-3xl border-2'>
                         <h1 className='text-5xl font-semibold'>Iniciar sesión</h1>
                         <p className='font-medium text-lg text-gray-500 mt-4'>Portal Cliente</p>
 
@@ -31,10 +31,10 @@ function LoginUser() {
                                     id='remember' />
                                     <label className="ml-2 font-medium text-base" for="remember"> Recordar por 30 dias</label>
                                 </div>
-                                <button className='font-medium text-base text-violet-500'>Olvidaste tú contraseña?</button>
+                                <button className='font-medium text-base text-blue-500'>Olvidaste tú contraseña?</button>
                             </div>
                             <div className='mt-8 flex flex-col gap-y-4'>
-                                <button className='active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-3 rounded-xl bg-violet-500 text-white text-lg font-bold'>Iniciar Sesion</button>
+                                <button className='active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-3 rounded-xl bg-blue-500 text-white text-lg font-bold'>Iniciar Sesion</button>
                                 <button className=''>
                                
                                     
@@ -45,12 +45,10 @@ function LoginUser() {
             </div>
 
 
-            <div className='hidden relative lg:flex h-full w-1/2 items-center justify-center bg-gray-200'>
-
-                <div className='w-60 h-60 bg-gradient-to-tr from-violet-500 to-pink-500 rounded-full animate-spin'/>
- 
-                <div className='w-full h-1/2 absolute bottom-0 bg-white/10 backdrop-blur-lg'/> 
-
+            <div className='hidden relative lg:flex h-full w-1/2 items-center justify-center lg:!border-blue-500'>
+                    <div className='scale-105 animate-[pulse_5s_linear_infinite]'>
+                    <img src="src/assets/logo.png" alt="eu" />
+                    </div>
             </div>
         </div>
     );
