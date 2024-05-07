@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         roboto: "Josefin Sans', sans-serif",
       },
+      screens: {
+        'xs': '320px',
+      },
       colors: {
         AzulCyan: "#4487EB",
         blancoFondo: "#F5F5F5",
