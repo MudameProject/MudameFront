@@ -30,27 +30,27 @@ InputField.propTypes = {
 
 const Register = () => {
 
-  //instancio los estados
-  const [user, setUser] = useState(false);
-  const [driver, setDriver] = useState(false);
+//   //instancio los estados
+//   const [user, setUser] = useState(false);
+//   const [driver, setDriver] = useState(false);
 
-  //confirmacion de que no se pulsa ambas
+//   //confirmacion de que no se pulsa ambas
 
-  const mostrarUser = () => {
-    if (!driver)
-    setUser(!user);
-  };
+//   const mostrarUser = () => {
+//     if (!driver)
+//     setUser(!user);
+//   };
 
-  const mostrarDriver = () => {
-    if (!user)
-    setDriver(!driver);
-  };
+//   const mostrarDriver = () => {
+//     if (!user)
+//     setDriver(!driver);
+//   };
 
-const desabilitarUser = user
-? "bg-sky-700" : "bg-white";
+// const desabilitarUser = user
+// ? "bg-sky-700" : "bg-white";
 
-const desabilitarDriver = driver
-? "bg-orange-700" : "bg-white";
+// const desabilitarDriver = driver
+// ? "bg-orange-700" : "bg-white";
 
 
   const [formData, setFormData] = useState({
@@ -109,8 +109,8 @@ const desabilitarDriver = driver
   return (
     <body className="flex items-start justify-center w-screen h-screen bg-gradient-to-b from-azulCielo from-60% to-[#0F5D38] ">
       <div className="pt-10 flex items-start justify-center  w-screen h-screen bg-gradient-to-b from-azulCielo from-60% to-[#0F5D38] z-50">
-        <button className={`${desabilitarUser}`} onClick={mostrarUser}>user</button>
-        <button className={`${desabilitarDriver}`} onClick={mostrarDriver}>driver</button>
+        {/* <button className={`${desabilitarUser}`} onClick={mostrarUser}>user</button>
+        <button className={`${desabilitarDriver}`} onClick={mostrarDriver}>driver</button> */}
         {/* {user ? ( */}
           <form
             onSubmit={handleSubmit}

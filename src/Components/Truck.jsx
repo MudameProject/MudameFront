@@ -4,7 +4,7 @@ import "./../App.css"
 
 function Truck() {
   return (
-    <div className="absolute top-[-40px] left-[2vw] saltico z-10">
+    <div className="absolute bottom-[70px] left-[2vw] saltico z-10">
       <img
         src={`${truck}`}
         alt="no cargo T_T"
