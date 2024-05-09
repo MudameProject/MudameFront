@@ -6,6 +6,7 @@ import Objectiv from "./Objectiv";
 import Mudanza1 from "../assets/mudanza.jpg";
 import Services from "./Services";
 import FAQ from "./FAQ";
+import InteresedOnTheWork from "./InteresedOnTheWork";
 
 function Header() {
   return (
@@ -155,6 +156,7 @@ function Header() {
           <div className="flex flex-col flex-wrap">
             <Objectiv />
             <Services />
+            <InteresedOnTheWork/>
             <FAQ/>
           </div>
         </div>
