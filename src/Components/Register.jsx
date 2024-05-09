@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import Road from "./Road";
+import logo from "./../assets/logo.png"
 
 const InputField = ({ label, type, id, placeholder, value, onChange }) => (
   <div className="mb-4">
@@ -107,84 +108,89 @@ const Register = () => {
   };
 
   return (
-    <body className="flex items-start justify-center w-screen h-screen bg-gradient-to-b from-azulCielo from-60% to-[#0F5D38] ">
-      <div className="pt-10 flex items-start justify-center  w-screen h-screen bg-gradient-to-b from-azulCielo from-60% to-[#0F5D38] z-50">
-        {/* <button className={`${desabilitarUser}`} onClick={mostrarUser}>user</button>
-        <button className={`${desabilitarDriver}`} onClick={mostrarDriver}>driver</button> */}
-        {/* {user ? ( */}
-          <form
-            onSubmit={handleSubmit}
-            className="bg-blancoTransparente shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 w-1/2 z-30"
-          >
-            <div className="flex mb-4">
-              <div className="w-1/2 pr-2">
-                <InputField
-                  label="Nombre"
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Nombre"
-                  value={formData.name}
-                  onChange={handleChange}
-                />
+    <body className=" flex justify-center w-screen h-screen bg-[#e5e2c9]">
+      
+        <img className="h-auto absolute -top-[7vh] z-30" src={logo} alt="no cargo" />
+      
+          <div className="absolute left-[25vw] top-[23vh] w-screen h-screen  z-50">
+          {/* <button className={`${desabilitarUser}`} onClick={mostrarUser}>user</button>
+          <button className={`${desabilitarDriver}`} onClick={mostrarDriver}>driver</button> */}
+          {/* {user ? ( */}
+            <form
+              onSubmit={handleSubmit}
+              className="bg-blancoTransparente shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 w-1/2 z-30"
+            >
+              <div className="flex mb-4">
+                <div className="w-1/2 pr-2">
+                  <InputField
+                    label="Nombre"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Nombre"
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="w-1/2 pl-2">
+                  <InputField
+                    label="Apellido"
+                    type="text"
+                    id="lastname"
+                    name="lastname"
+                    placeholder="Apellido"
+                    value={formData.lastname}
+                    onChange={handleChange}
+                  />
+                </div>
               </div>
-              <div className="w-1/2 pl-2">
-                <InputField
-                  label="Apellido"
-                  type="text"
-                  id="lastname"
-                  name="lastname"
-                  placeholder="Apellido"
-                  value={formData.lastname}
-                  onChange={handleChange}
-                />
+              <InputField
+                label="Número de Teléfono"
+                type="tel"
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="123-456-7890"
+                value={formData.phoneNumber}
+                onChange={handleChange}
+              />
+              <InputField
+                label="Correo Electrónico"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Correo Electrónico"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              <InputField
+                label="Contraseña"
+                type="password"
+                id="password"
+                name="password"
+                placeholder="******************"
+                value={formData.password}
+                onChange={handleChange}
+              />
+              <InputField
+                label="Confirmar Contraseña"
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="******************"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+              />
+              <div className="flex items-center justify-between">
+                <button
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition-all ease-in duration-200"
+                  type="submit"
+                >
+                  Registrarse
+                </button>
               </div>
-            </div>
-            <InputField
-              label="Número de Teléfono"
-              type="tel"
-              id="phoneNumber"
-              name="phoneNumber"
-              placeholder="123-456-7890"
-              value={formData.phoneNumber}
-              onChange={handleChange}
-            />
-            <InputField
-              label="Correo Electrónico"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Correo Electrónico"
-              value={formData.email}
-              onChange={handleChange}
-            />
-            <InputField
-              label="Contraseña"
-              type="password"
-              id="password"
-              name="password"
-              placeholder="******************"
-              value={formData.password}
-              onChange={handleChange}
-            />
-            <InputField
-              label="Confirmar Contraseña"
-              type="password"
-              id="confirmPassword"
-              name="confirmPassword"
-              placeholder="******************"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-            />
-            <div className="flex items-center justify-between">
-              <button
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition-all ease-in duration-200"
-                type="submit"
-              >
-                Registrarse
-              </button>
-            </div>
-          </form>
+            </form>
+        </div>
+        
         {/* ): driver ?(
           <></>
         ) : (
@@ -193,7 +199,6 @@ const Register = () => {
         } */}
         
         <Road />
-      </div>
       
     </body>
   );
