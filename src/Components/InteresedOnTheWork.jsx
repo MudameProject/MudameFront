@@ -1,5 +1,6 @@
 import React from "react";
 import ObjectivImage from "../assets/driverHappy.jpeg";
+import { Link } from 'react-router-dom';
 
 function InteresedOnTheWork() {
   return (
@@ -33,7 +34,9 @@ function InteresedOnTheWork() {
               <b>Solo tomara 5 minutos de tu tiempo</b>
             </p>
             <button className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            
+            <Link to="/Login" class="text-decoration-none">
+            Register
+              </Link>
           </button>
           </div>
         </div>
