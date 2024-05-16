@@ -4,7 +4,11 @@ import "./../App.css"
 
 function Truck() {
   return (
+<<<<<<< HEAD
     <div className="absolute top-[-90px] left-[10vw] saltico z-20">
+=======
+    <div className="absolute top-[-40px] left-[10vw] saltico z-30">
+>>>>>>> Feacture/Carlos
       <img
         src={`${truck}`}
         alt="no cargo T_T"
