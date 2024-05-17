@@ -3,7 +3,7 @@ import ObjectivImage from "../assets/objectiv.png";
 
 function Objectiv() {
   return (
-    <div className="bg-white rounded-lg p-8 transition-all duration-500 ease-in-out">
+    <div className="bg-white rounded-lg p-8 transition-all duration-500 ease-in-out select-none">
       <div className="flex flex-col md:flex-row justify-between">
         <div className="w-full md:w-1/2 flex items-center mb-4 md:mb-0">
           <img className="w-full" src={ObjectivImage} alt="no cargo" />

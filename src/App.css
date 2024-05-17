@@ -1,12 +1,27 @@
+<<<<<<< HEAD
+:root{
+  overflow: hidden;
+}
+=======
+>>>>>>> Feacture/Carlos
 
 .saltico {
   animation: rebote 0.6s infinite;
 }
 
+<<<<<<< HEAD
+
+
+@keyframes rebote {
+  0%,
+  100% {
+    transform: translateY(-6%);
+=======
 @keyframes rebote {
   0%,
   100% {
     transform: translateY(-4%);
+>>>>>>> Feacture/Carlos
     animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
   50% {
@@ -14,6 +29,8 @@
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
+<<<<<<< HEAD
+=======
 
 .infinite {
   position: relative;
@@ -51,3 +68,21 @@
     background-position: 240px;
   }
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #437efe;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+>>>>>>> Feacture/Carlos

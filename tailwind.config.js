@@ -6,13 +6,22 @@ export default {
       fontFamily: {
         roboto: "Josefin Sans', sans-serif",
       },
+<<<<<<< HEAD
+=======
+      screens: {
+        'xs': '320px',
+      },
+>>>>>>> Feacture/Carlos
       colors: {
         AzulCyan: "#4487EB",
         blancoFondo: "#F5F5F5",
         azulvivo: "#191970",
         azulCorpotativo: "#5485d2",
         azulCielo: "#5885b7",
+<<<<<<< HEAD
+=======
         blancoTransparente: "#ffffff88",
+>>>>>>> Feacture/Carlos
       },
 
       Animation: {
