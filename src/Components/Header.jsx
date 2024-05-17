@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom';
 import logo from "../assets/logo.png"
@@ -103,8 +102,8 @@ function Header() {
     )
 }
 
-export default Header
-=======
+
+
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
@@ -273,4 +272,3 @@ function Header() {
 }
 
 export default Header;
->>>>>>> Feacture/Carlos
