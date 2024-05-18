@@ -16,9 +16,11 @@
 }
 
 .infinite {
-  position: relative;
+  position: absolute;
+  bottom: 0px;
   width: 100vw;
-  height: 100%;
+  z-index: 5;
+  height: 12rem;
   --tw-bg-opacity: 1;
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
   transform-origin: bottom;
@@ -30,7 +32,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 100%;
+  width: 140vw;
   height: 10px;
   background: linear-gradient(
     90deg,
@@ -52,19 +54,94 @@
   }
 }
 
-::-webkit-scrollbar {
-  width: 10px;
+.mountains {
+  position: absolute;
+  bottom: 0vh;
+  width: 100vw;
+  height: 600px;
+  transform: scale(2, 1);
+  background-color: rgba(255, 255, 255, 0);
+  transform-origin: top;
+}
+.mountains::before {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    30deg,
+    #223d31 10%,
+    #335C49 50%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  background-size: 270px;
+  transform: skew(-30deg, 0deg);
+  animation: colina 4s linear reverse infinite;
 }
 
-::-webkit-scrollbar-track {
-  background: #ffffff00;
+.otraM {
+  position: absolute;
+  bottom: 35vh;
+  z-index: -3;
+  width: 100vw;
+  height: 600px;
+  transform: scale(3, 1.2);
+  background-color: rgba(255, 255, 255, 0);
+  transform-origin: top;
+}
+.otraM::before {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    30deg,
+    #445d2a 0%,
+    #678C40 60%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  background-size: 270px;
+  transform: skew(-40deg, 0deg);
+  animation: colina 8s linear reverse infinite;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #437efe;
-  border-radius: 12px;
+.doble {
+  position: absolute;
+  bottom: 50vh;
+  z-index: -5;
+  width: 100vw;
+  height: 600px;
+  transform: scale(4, 1.2);
+  background-color: rgba(255, 255, 255, 0);
+  transform-origin: top;
+}
+.doble::before {
+  content: "";
+  position: absolute;
+  bottom: -15%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    30deg,
+    #8a8a27 0%,
+    #BDBE36 60%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  background-size: 270px;
+  transform: skew(-40deg, 0deg);
+  animation: colina 23s linear reverse infinite;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #2563EB;
+@keyframes colina {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 270px;
+  }
 }
