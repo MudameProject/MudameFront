@@ -24,7 +24,7 @@ const Prueba = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-200">
+    <div className="flex justify-center items-center h-screen">
       <div className="w-full max-w-md bg-white shadow-md rounded-lg px-8 py-6">
         <h2 className="text-2xl font-semibold mb-4">Registro de Usuario</h2>
         <form className="space-y-4">
