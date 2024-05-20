@@ -3,10 +3,15 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { AiOutlineClose } from "react-icons/ai";
 import Objectiv from "./Objectiv";
-import Mudanza1 from "../assets/mudanza.jpg";
+import Mudanza1 from "../assets/Truck.jpg";
+import Mudanza2 from "../assets/Mudanza1.jpg";
+import Mudanza3 from "../assets/Mudanza2.jpg";
+import Mudanza4 from "../assets/Mudanza3.jpg";
 import Services from "./Services";
 import FAQ from "./FAQ";
 import InteresedOnTheWork from "./InteresedOnTheWork";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
 function Header() {
   return (
@@ -15,7 +20,7 @@ function Header() {
         <nav className="flex justify-between items-center w-11/12 mx-auto">
           <div class="">
             <img
-              class="w-20 object-contain items-center justify-center flex"
+              class="w-14 object-contain items-center justify-center flex"
               src={logo}
               alt=""
             ></img>
@@ -91,8 +96,6 @@ function Header() {
                 Iniciar Sesión
               </Link>
             </button>
-            
-            
             <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-sky-500 transition-colors">
               <Link to="/Register" class="text-decoration-none">
                 Registrarse
@@ -109,7 +112,7 @@ function Header() {
         </nav>
       </div>
       <div class="h-5/6 w-full bg-white/90 grid items-center md:grid-cols-2 rounded-e-lg">
-        <div class="w-full bg-AzulCyan/20 flex p-10 pt-10 flex-col md:p-18 md:px-32 justify-center md:h-full">
+        <div class="w-full bg-AzulCyan/20 flex p-10 pt-10 flex-col md:p-18 md:px-32 justify-center md:h-full lg:h-screen">
           <div class="">
             <h5 class="text-3xl text-black/40">Bienvenido</h5>
           </div>
@@ -139,14 +142,14 @@ function Header() {
           <div class="w-1/3 h-1/3  rounded-full">
             <img
               className="w-full rounded-full h-full object-cover"
-              src={Mudanza1}
+              src={Mudanza2}
               alt=""
             />
           </div>
           <div class="w-1/3 h-1/3 border-r-[15px] animate-wiggle1 border-white/5  rounded-full">
             <img
               className="w-full rounded-full h-full object-cover"
-              src={Mudanza1}
+              src={Mudanza3}
               alt=""
             />
           </div>
@@ -154,7 +157,7 @@ function Header() {
           <div class="w-1/2 h-1/2  rounded-t-full">
             <img
               className="w-full rounded-t-full h-full object-cover"
-              src={Mudanza1}
+              src={Mudanza4}
               alt=""
             />
           </div>
@@ -165,9 +168,12 @@ function Header() {
             <Services />
             <InteresedOnTheWork/>
             <FAQ/>
+
           </div>
         </div>
       </div>
+      <Contact></Contact>
+      <Footer></Footer>
     </div>
   );
 }

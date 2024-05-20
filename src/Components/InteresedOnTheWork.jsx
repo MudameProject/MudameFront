@@ -5,9 +5,9 @@ function InteresedOnTheWork() {
   return (
     <div className="bg-white rounded-lg p-8 transition-all duration-500 ease-in-out select-none">
       <div className="flex flex-col md:flex-row justify-between">
-        <div className="w-full md:w-1/2 flex flex-col items-center mb-4 md:mb-0 border-2 border-red-500">
+        <div className="w-full md:w-1/2 flex flex-col items-center mb-4 md:mb-0 border-2 border-sky-500 rounded-lg">
           <div className="w-full">
-            <img className="w-full" src={ObjectivImage} alt="no cargo" />
+            <img className="w-full rounded-lg" src={ObjectivImage} alt="no cargo" />
           </div>
           <div className="w-full p-4 bg-white rounded-lg mt-4">
             <p className="text-gray-600 text-lg mb-2">
