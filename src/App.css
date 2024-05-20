@@ -1,27 +1,12 @@
-<<<<<<< HEAD
-:root{
-  overflow: hidden;
-}
-=======
->>>>>>> Feacture/Carlos
 
 .saltico {
   animation: rebote 0.6s infinite;
 }
 
-<<<<<<< HEAD
-
-
-@keyframes rebote {
-  0%,
-  100% {
-    transform: translateY(-6%);
-=======
 @keyframes rebote {
   0%,
   100% {
     transform: translateY(-4%);
->>>>>>> Feacture/Carlos
     animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
   50% {
@@ -29,8 +14,6 @@
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
-<<<<<<< HEAD
-=======
 
 .infinite {
   position: relative;
@@ -41,6 +24,7 @@
   transform-origin: bottom;
   transform-style: preserve-3d;
   transform: rotatex(30deg);
+  overflow: hidden; /* Added property */
 }
 .infinite::before {
   content: "";
@@ -85,4 +69,3 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #2563EB;
 }
->>>>>>> Feacture/Carlos
