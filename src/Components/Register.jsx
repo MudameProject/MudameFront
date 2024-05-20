@@ -8,7 +8,7 @@ const Register = () => {
   return (
     <body className=" flex justify-center w-screen h-screen bg-[#e5e2c9]">
       
-        <img className="h-auto absolute -top-[7vh] z-30" src={logo} alt="no cargo" />
+        <img className="h-auto absolute -top-[4vh] z-30" src={logo} alt="no cargo" />
         <Road />
         <div className="z-20">
           <DatosRegister1 />
