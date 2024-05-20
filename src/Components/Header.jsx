@@ -86,6 +86,13 @@ function Header() {
             </ul>
           </div>
           <div class="flex items-center gap-5">
+          <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-sky-500 transition-colors">
+              <Link to="/LoginUser" class="text-decoration-none">
+                Iniciar Sesión
+              </Link>
+            </button>
+            
+            
             <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-sky-500 transition-colors">
               <Link to="/Register" class="text-decoration-none">
                 Registrarse
