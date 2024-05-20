@@ -6,6 +6,12 @@ const Prueba = () => {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
 
+  const [isButton, setButton] = useState(false);
+
+  const botton = isButton
+    ? "block"
+    : "hidden";
+
   const handleRegistration = async () => {
     if (!userName || !password) {
       setMessage('Por favor, completa todos los campos');
@@ -17,6 +23,7 @@ const Prueba = () => {
         userName,
         password,
       });
+      setButton(true);
       setMessage(response.data.message);
     } catch (error) {
       setMessage('Error al registrar el usuario');
@@ -54,14 +61,26 @@ const Prueba = () => {
               className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
           </div>
-          <button
-            type="button"
-            onClick={handleRegistration}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition-all ease-in duration-200"
-          >
-            Registrarse
-          </button>
+          <div className='w-full flex flex-col'>
+            <div className='w-full flex justify-around'>
+                <button
+                type="button"
+                onClick={handleRegistration}
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition-all ease-in duration-200"
+              >
+                Registrarse
+              </button>
+              <button
+                type="button"
+                onClick={handleRegistration}
+                className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition-all ease-in duration-200 ${botton}`}
+              >
+                continuar
+              </button>
+            </div>
+          
           {message && <p className="text-red-500">{message}</p>}
+          </div>
         </form>
       </div>
     </div>
