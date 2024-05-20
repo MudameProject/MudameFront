@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function LoginUser() {
     return (
-        <div className='flex w-full h-screen'>
+        <div className='flex w-full h-screen bg-slate-100'>
             <div className='w-full flex items-center justify-center   lg:w-1/2  '>
                 <div className='border-blue-500 px-10 py-20 rounded-3xl border-2'>
                         <h1 className='text-5xl font-semibold'>Iniciar sesión</h1>
@@ -15,14 +15,14 @@ function LoginUser() {
                             <div>
                                 <label className='text-lg font-medium'>Email</label>
                                 <input 
-                                className='w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent' 
+                                className='w-full border-2 border-blue-500 rounded-xl p-4 mt-1 bg-transparent' 
                                 placeholder='Ingresa tu Email' />
                             </div>
 
                             <div>
                                 <label className='text-lg font-medium'>Password</label>
                                 <input 
-                                className='w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent' 
+                                className='w-full border-2 border-blue-500 rounded-xl p-4 mt-1 bg-transparent' 
                                 placeholder='Ingresa tu Contraseña'
                                 type='password' />
 
