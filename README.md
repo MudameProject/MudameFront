@@ -1,5 +1,15 @@
 ## Mudame - v1
 
+#### Miembros:
+
+-Alejandro Marulanda (Spring Boot)
+-Nicolas Luna (Spring Boot)
+-Carlos Aguiar (Spring Boot)
+-David Osorio (Spring Boot)
+-Daniel Jimenez (NestJS)
+-Miguel Angel Rivera (NestJS)
+
+
 Mudame es una aplicación API RESTful conformada por React (FrontEnd) y SpringBoot (Backend), diseñada para gestionar un proceso de mudanza digital. Esta API se integra con NestJs para permitir a los usuarios registrarse e iniciar sesión, generando una autenticación que les permite administrar sus mudanzas mediante roles específicos y acceder a los demás servicios que ofrece la aplicación.
 
 ## Instalación local de la aplicación
