@@ -20,7 +20,7 @@ const DatosRegister = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/auth/registerClient",
+        "http://localhost:4000/v1/api/auth/register",
         {
           userName,
           password,
