@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import UpperRoad from './UpperRoad';
 
 
 
 function LoginUser() {
     return (
-        <div className='flex w-full h-screen bg-slate-100'>
-            <div className='w-full flex items-center justify-center   lg:w-1/2  '>
-                <div className='border-blue-500 px-10 py-20 rounded-3xl border-2'>
+        <div className='flex w-full h-screen overflow-hidden'>
+            <div className='w-full flex items-center justify-center   lg:w-1/2 '>
+                <div className='border-blue-500 px-10 py-20 rounded-3xl border-2 bg-white'>
                         <h1 className='text-5xl font-semibold'>Iniciar sesión</h1>
                         <p className='font-medium text-lg text-gray-500 mt-4'>Portal Cliente Mudame</p>
 
@@ -46,9 +47,10 @@ function LoginUser() {
 
             <div className='hidden relative lg:flex h-full w-1/2 items-center justify-center lg:!border-blue-500'>
                     <div className='scale-105 animate-[pulse_5s_linear_infinite]'>
-                    <img src="src/assets/logo.png" alt="eu" />
+                    <img src="src/assets/logo.png" alt="eu" className='bg-white rounded-full'/>
                     </div>
             </div>
+            <UpperRoad/>
         </div>
     );
 }

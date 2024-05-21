@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import axios from "axios";
 
 const InputField = ({ label, type, id, placeholder, value, onChange }) => (
   <div className="mb-4">
