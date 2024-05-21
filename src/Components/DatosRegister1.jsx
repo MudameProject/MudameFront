@@ -1,27 +1,48 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
+import DatosCompleto from "./DatosCompleto";
 
-const Prueba = () => {
-  const [userName, setUserName] = useState('');
-  const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
+const DatosRegister = () => {
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
+  const [isButton, setButton] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [isNewVisible, setNewVisible] = useState(false);
+  const [token, setToken] = useState('');
+  const botton = isButton ? "block" : "hidden";
 
   const handleRegistration = async () => {
     if (!userName || !password) {
-      setMessage('Por favor, completa todos los campos');
+      setMessage("Por favor, completa todos los campos");
       return;
     }
 
     try {
-      const response = await axios.post('http://localhost:8080/api/v1/auth/register', {
-        userName,
-        password,
-      });
+      const response = await axios.post(
+        "http://localhost:8080/api/v1/auth/registerClient",
+        {
+          userName,
+          password,
+        }
+      );
+      setButton(true);
       setMessage(response.data.message);
+      const token = response.data.token;
+      setToken(token);
     } catch (error) {
-      setMessage('Error al registrar el usuario');
+      setMessage("Error al registrar el usuario");
     }
   };
+
+  const handleContinue = () => {
+    setIsVisible(false); 
+    setNewVisible(true); 
+  };
+
+  if (!isVisible) {
+    return <DatosCompleto token={token}/>; 
+  }
 
   return (
     <div className="flex justify-center items-center h-screen">
@@ -54,18 +75,30 @@ const Prueba = () => {
               className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
           </div>
-          <button
-            type="button"
-            onClick={handleRegistration}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition-all ease-in duration-200"
-          >
-            Registrarse
-          </button>
-          {message && <p className="text-red-500">{message}</p>}
+          <div className="w-full flex flex-col">
+            <div className="w-full flex justify-around">
+              <button
+                type="button"
+                onClick={handleRegistration}
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition-all ease-in duration-200"
+              >
+                Registrarse
+              </button>
+              <button
+                type="button"
+                onClick={handleContinue}
+                className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition-all ease-in duration-200 ${botton}`}
+              >
+                continuar
+              </button>
+            </div>
+
+            {message && <p className="text-red-500">{message}</p>}
+          </div>
         </form>
       </div>
     </div>
   );
 };
 
-export default Prueba;
+export default DatosRegister;
