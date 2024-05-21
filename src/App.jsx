@@ -3,7 +3,6 @@ import "./App.css";
 import Header from "./Components/Header";
 import Register from "./Components/Register";
 import LoginUser from "./Components/LoginUser";
-import Prueba from "./Components/DatosRegister1";
 function App() {
   return (
     <Router>

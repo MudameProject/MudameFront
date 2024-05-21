@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import axios from "axios";
 import DatosCompleto from "./DatosCompleto";
 
-const Prueba = () => {
+const DatosRegister = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [isButton, setButton] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [isNewVisible, setNewVisible] = useState(false);
-
+  const [token, setToken] = useState('');
   const botton = isButton ? "block" : "hidden";
 
   const handleRegistration = async () => {
@@ -28,6 +28,8 @@ const Prueba = () => {
       );
       setButton(true);
       setMessage(response.data.message);
+      const token = response.data.token;
+      setToken(token);
     } catch (error) {
       setMessage("Error al registrar el usuario");
     }
@@ -39,7 +41,7 @@ const Prueba = () => {
   };
 
   if (!isVisible) {
-    return <DatosCompleto />; 
+    return <DatosCompleto token={token}/>; 
   }
 
   return (
@@ -99,4 +101,4 @@ const Prueba = () => {
   );
 };
 
-export default Prueba;
+export default DatosRegister;
